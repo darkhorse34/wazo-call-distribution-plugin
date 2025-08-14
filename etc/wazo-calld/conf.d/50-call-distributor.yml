@@ -1,0 +1,11 @@
+enabled_plugins:
+  call_distributor: true
+
+call_distributor:
+  # default survey destination (used by /csr/transfer if body omits it)
+  survey_context: "default"
+  survey_exten: "8899"      # create this as your survey IVR or application entry
+  survey_timeout: 15        # seconds
+
+  # default ring timeout per agent for sequential distribution
+  ring_timeout: 15          # seconds

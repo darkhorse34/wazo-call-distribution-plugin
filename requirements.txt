@@ -1,0 +1,2 @@
+wazo-calld-client>=2.0.0
+Flask>=2.0.0

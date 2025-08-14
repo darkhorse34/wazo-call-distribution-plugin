@@ -1,0 +1,5 @@
+namespace: yourco
+name: call-distributor
+description: Minimal call distribution + transfer-to-survey endpoints for wazo-calld
+version: 0.1.0
+plugin_format_version: 0
