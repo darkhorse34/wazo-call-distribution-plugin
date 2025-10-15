@@ -1,0 +1,11 @@
+webhooks:
+  - name: acd-events
+    enabled: true
+    url: https://18.224.2.16/wazo/events
+    events:
+      - call_queued
+      - call_answered
+      - call_abandoned
+      - agent_paused
+      - agent_resumed
+    secret: "change-me"
