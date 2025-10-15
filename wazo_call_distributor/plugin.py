@@ -17,6 +17,9 @@ from .api.desktop import bp as desktop_bp
 from .api.supervisor import bp as supervisor_bp
 from .api.callback import bp as callback_bp
 from .api.rbac import bp as rbac_bp
+from .api.reporting import bp as reporting_bp
+from .api.integration import bp as integration_bp
+from .api.reliability import bp as reliability_bp
 from .websocket import WebSocketHandler
 from .models import Base
 
@@ -65,6 +68,9 @@ class Plugin:
         app.register_blueprint(supervisor_bp, url_prefix="/api/calld/1.0/supervisor")
         app.register_blueprint(callback_bp, url_prefix="/api/calld/1.0/callbacks")
         app.register_blueprint(rbac_bp, url_prefix="/api/calld/1.0/rbac")
+        app.register_blueprint(reporting_bp, url_prefix="/api/calld/1.0/reporting")
+        app.register_blueprint(integration_bp, url_prefix="/api/calld/1.0/integrations")
+        app.register_blueprint(reliability_bp, url_prefix="/api/calld/1.0/reliability")
         
         # Initialize WebSocket handler
         self.websocket_handler = WebSocketHandler(app.config['call_distributor']['redis_url'])
